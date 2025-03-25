@@ -1,12 +1,12 @@
 Crotalus Venom Toxin Analysis
 
-Overview
+Overview<br>
 This project explores the presence and overlap of venom toxins across multiple species within the Crotalus genus. The purpose of this analysis is to identify the most prevalent toxins across species and evaluate potential targets for the development of universal or broadly effective antivenoms.
 
-Research Questions
-•	How much toxin overlap exists between Crotalus snake species?
-•	What are the most common venom toxins across the genus?
-•	How similar or different are venom compositions between species within the genus?
+Research Questions<br>
+•	How much toxin overlap exists between Crotalus snake species?<br>
+•	What are the most common venom toxins across the genus?<br>
+•	How similar or different are venom compositions between species within the genus?<br>
 
 Objectives
 •	Provide a framework for analyzing venom toxin composition in Crotalus snakes.
