@@ -29,30 +29,30 @@ Dependencies
 •	ggplot2
 
 Running the Analysis
-# Install packages if needed
-# install.packages("tidyverse")
-# install.packages("ggplot2")
+#Install packages if needed
+#install.packages("tidyverse")
+#install.packages("ggplot2")
 
-# Load libraries
+#Load libraries
 library(tidyverse)
 library(ggplot2)
 
-# Set working directory and load data
+#Set working directory and load data
 setwd("Insert relevant folder location")
 venom_data <- read.csv("venom_composition.csv")
 
-# View first few rows
+#View first few rows
 head(venom_data)
 
-# Check for missing values
+#Check for missing values
 sum(is.na(venom_data))
 
-# Transform data to long format for visualization
+#Transform data to long format for visualization
 venom_long <- venom_data %>%
   pivot_longer(cols = -Species, names_to = "Toxin", values_to = "Presence") %>%
   mutate(Toxin = gsub("\\.", " ", Toxin))
 
-# Plot heatmap
+#Plot heatmap
 toxin_overlap <- ggplot(venom_long, aes(x = Species, y = Toxin, fill = factor(Presence))) +
   geom_tile(width = 0.9) +  # Makes each column wider)
   scale_fill_manual(values = c("0" = "red", "1" = "darkgreen"),
@@ -67,7 +67,7 @@ toxin_overlap <- ggplot(venom_long, aes(x = Species, y = Toxin, fill = factor(Pr
   )
 toxin_overlap
 
-# Save the plot with more space
+#Save the plot with more space
 ggsave("venom_overlap.png", plot = toxin_overlap, width = 12, height = 6, dpi = 300, bg = "white")
 
 References
